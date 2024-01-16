@@ -1,7 +1,7 @@
 import styles from "../App.module.css"
 
-function ButtonsContainers(){
-    let btns = ["1","2","3","4","5","6","7","8","9","0","+","-","/","*",".","="]
+function ButtonsContainers({onButtonClick}){
+    let btns = [ "0", "1","2","3","4","5","6","7","8","9","+","-","/","*",".","="]
 return(
 <>
 
@@ -9,7 +9,7 @@ return(
       
 {
     btns.map((btnNames)=>
-    (<button key ={btnNames} className={styles.button}>{btnNames}</button>)
+    (<button key ={btnNames} onClick={onButtonClick} className={styles.button}>{btnNames}</button>)
     )
 }
 
