@@ -48,10 +48,9 @@ function removeAll(){
    {listData!=[] && listData.map((Data , index )=>{
     return(
         <>
-        <p key = {index}>
-            <div> task : {Data.name}  timing : {Data.duedate}</div>
+        <p key={index} >
+            task : {Data.name}  timing : {Data.duedate}
             
-
             <button onClick={()=>removeActivity(index)}>remove</button>
         </p>
         </>
